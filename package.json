@@ -1,0 +1,51 @@
+{
+  "name": "walls",
+  "version": "1.0.0",
+  "description": "a filesystem firewall i built because an AI deleted my .env in production and i haven't been the same since",
+  "main": "dist/index.js",
+  "bin": {
+    "walls": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "firewall",
+    "filesystem",
+    "watch",
+    "rollback",
+    "accident-prone",
+    "trust-issues"
+  ],
+  "author": "someone who learned the hard way",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "chokidar": "^3.5.3",
+    "cli-table3": "^0.6.3",
+    "commander": "^12.0.0",
+    "minimatch": "^9.0.3",
+    "ora": "^7.0.1",
+    "yaml": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davi713albano-coder/walls.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davi713albano-coder/walls/issues"
+  },
+  "homepage": "https://github.com/davi713albano-coder/walls#readme"
+}
