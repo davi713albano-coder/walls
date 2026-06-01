@@ -196,3 +196,6 @@ MIT
 ---
 
 <sup>Built with paranoia and a healthy dose of caffeine.</sup>
+
+<!-- personal note: this was built after one too many production incidents -->
+
