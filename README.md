@@ -1,5 +1,13 @@
 <div align="center">
 
+```
+ __        __   _    _             
+ \ \      / /__| |__| | __ _ _ __  
+  \ \ /\ / / _ \ '_ \ |/ _` | '__| 
+   \ V  V \  __/ |_) | | (_| | |    
+    \_/\_/ \___|_.__/|_|\__,_|_|    
+```
+
 # 🧱 walls
 
 **Firewall de filesystem que protege, monitora e faz rollback de alterações nos seus arquivos**
@@ -15,6 +23,8 @@
 [![Last Commit](https://img.shields.io/github/last-commit/davi713albano-coder/walls?style=for-the-badge&color=green)](https://github.com/davi713albano-coder/walls/commits/main)
 [![Repo Size](https://img.shields.io/github/repo-size/davi713albano-coder/walls?style=for-the-badge&color=orange)](https://github.com/davi713albano-coder/walls)
 
+[![Open Source](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/davi713albano-coder/walls)
+
 ---
 
 </div>
@@ -24,13 +34,14 @@
 - [🤔 The Problem](#-the-problem)
 - [✨ Features](#-features)
 - [🚀 Quick Start](#-quick-start)
-- [📦 Instalação](#-instalação)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚦 Getting Started](#-getting-started)
 - [📖 Comandos](#-comandos)
 - [⚙️ Configuração](#️-configuração)
-- [🛠️ Tech Stack](#️-tech-stack)
 - [🗺️ Roadmap](#️-roadmap)
+- [🗂️ Estrutura do Projeto](#️-estrutura-do-projeto)
 - [🤝 Contribuição](#-contribuição)
-- [📄 Licença](#-licença)
+- [📜 Licença e Autor](#-licença-e-autor)
 
 ---
 
@@ -74,7 +85,17 @@ npx walls shield .env .env.local secrets/
 
 ---
 
-## 📦 Instalação
+## 🛠️ Tech Stack
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
+[![Commander](https://img.shields.io/badge/Commander-12.0+-red?style=flat-square)](https://github.com/tj/commander.js)
+[![Chokidar](https://img.shields.io/badge/Chokidar-3.5+-yellow?style=flat-square)](https://github.com/paulmillr/chokidar)
+[![Chalk](https://img.shields.io/badge/Chalk-5.3+-green?style=flat-square)](https://github.com/chalk/chalk)
+
+---
+
+## 🚦 Getting Started
 
 ### 📋 Pré-requisitos
 
@@ -92,6 +113,13 @@ npm install -g walls
 
 # Ou use diretamente com npx
 npx walls <command>
+```
+
+### ▶️ Rodando localmente
+
+```bash
+# Inicie o watch
+npx walls watch
 ```
 
 ---
@@ -214,6 +242,22 @@ snapshots:
 
 ---
 
+## 🗺️ Roadmap
+
+- [x] ✅ **Watch** — watch filesystem changes in real-time
+- [x] ✅ **Shield** — protect files and directories
+- [x] ✅ **Snapshot** — create full project snapshots
+- [x] ✅ **Rollback** — undo changes
+- [x] ✅ **Audit** — track what happened
+- [x] ✅ **Rules** — define automatic filesystem rules
+- [ ] 🚧 **Dashboard** — local web dashboard
+- [ ] 🚧 **Desktop Notifications** — native OS notifications for blocked actions
+- [ ] 🚧 **Strict Mode** — block everything until you approve
+- [ ] 🚧 **VS Code Extension** — plugin for Visual Studio Code
+- [ ] 🚧 **Git Integration** — auto-commit snapshots
+
+---
+
 ## 🗂️ Estrutura do Projeto
 
 ```
@@ -240,32 +284,6 @@ snapshots:
 
 ---
 
-## 🛠️ Tech Stack
-
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
-[![Commander](https://img.shields.io/badge/Commander-12.0+-red?style=flat-square)](https://github.com/tj/commander.js)
-[![Chokidar](https://img.shields.io/badge/Chokidar-3.5+-yellow?style=flat-square)](https://github.com/paulmillr/chokidar)
-[![Chalk](https://img.shields.io/badge/Chalk-5.3+-green?style=flat-square)](https://github.com/chalk/chalk)
-
----
-
-## 🗺️ Roadmap
-
-- [x] ✅ **Watch** — watch filesystem changes in real-time
-- [x] ✅ **Shield** — protect files and directories
-- [x] ✅ **Snapshot** — create full project snapshots
-- [x] ✅ **Rollback** — undo changes
-- [x] ✅ **Audit** — track what happened
-- [x] ✅ **Rules** — define automatic filesystem rules
-- [ ] 🚧 **Dashboard** — local web dashboard
-- [ ] 🚧 **Desktop Notifications** — native OS notifications for blocked actions
-- [ ] 🚧 **Strict Mode** — block everything until you approve
-- [ ] 🚧 **VS Code Extension** — plugin for Visual Studio Code
-- [ ] 🚧 **Git Integration** — auto-commit snapshots
-
----
-
 ## 🤝 Contribuição
 
 PRs welcome. This is a personal project that grew out of a bad night. If it helps you, great. If you have ideas, open an issue or send a PR.
@@ -275,19 +293,41 @@ PRs welcome. This is a personal project that grew out of a bad night. If it help
 1. **Fork** este repositório
 2. **Clone** seu fork: `git clone https://github.com/seu-usuario/walls.git`
 3. **Crie** uma branch: `git checkout -b feat/minha-feature`
-4. **Commit** suas mudanças: `git commit -m 'feat: adiciona nova feature'`
-5. **Push** para a branch: `git push origin minha-feature`
-6. Abra um **Pull Request**
+4. **Commit** com [Conventional Commits](https://www.conventionalcommits.org/):
+
+```bash
+git commit -m "feat: adiciona nova feature"
+git commit -m "fix: corrige bug no watch"
+git commit -m "docs: atualiza README"
+```
+
+5. **Push** e abra um **Pull Request**:
+
+```bash
+git push origin feat/minha-feature
+```
+
+### 🎯 Padrão de Commits (Conventional Commits)
+
+| Prefixo | Descrição | Exemplo |
+|---------|-----------|---------|
+| `feat:` | Nova funcionalidade | `feat: adiciona strict mode` |
+| `fix:` | Correção de bug | `fix: corrige bug no watch` |
+| `docs:` | Documentação | `docs: atualiza README` |
+| `style:` | Formatação | `style: formata com prettier` |
+| `refactor:` | Refatoração | `refactor: otimiza watcher` |
+| `test:` | Testes | `test: adiciona testes para snapshot` |
+| `chore:` | Build/CI | `chore: adiciona GitHub Actions` |
 
 ---
 
-## 📄 Licença
+## 📜 Licença e Autor
 
-MIT — veja [LICENSE](LICENSE) para mais detalhes.
+<div align="center">
 
----
+Este projeto está licenciado sob a **MIT License** — veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-## 👤 Autor
+### 👨‍💻 Autor
 
 **davi713albano-coder**
 
@@ -295,12 +335,21 @@ MIT — veja [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-<div align="center">
+### 🙏 Agradecimentos
 
-⭐ **Se este projeto te ajudou, considere dar uma star!** ⭐
+- [Commander](https://github.com/tj/commander.js) pela CLI elegante
+- [Chokidar](https://github.com/paulmillr/chokidar) pelo watch de filesystem
+- [Chalk](https://github.com/chalk/chalk) pelos logs coloridos
+- Comunidade open-source por inspiração
+
+---
 
 <p align="center">
   <sub>Feito com paranoia e uma dose saudável de cafeína. Mantido por <a href='https://github.com/davi713albano-coder'>@davi713albano-coder</a></sub>
+</p>
+
+<p align="center">
+  ⭐ <strong>Se este projeto te ajudou, considere dar uma star!</strong> ⭐
 </p>
 
 </div>
