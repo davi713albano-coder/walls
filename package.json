@@ -11,6 +11,7 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
+    "test": "npm run build && node test/snapshot.test.mjs",
     "prepare": "npm run build"
   },
   "keywords": [
